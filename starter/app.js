@@ -1,55 +1,21 @@
-const todos = [
-  { text: "Lära mig branches", done: false },
-  { text: "Skapa PR och få review", done: false },
-  { text: "Lösa en mergekonflikt", done: false },
-];
+const form = document.getElementById("todo-form");
+const input = document.getElementById("todo-input");
+const list = document.getElementById("todo-list");
 
-const listEl = document.getElementById("todoList");
-const addBtn = document.getElementById("addBtn");
-const inputEl = document.getElementById("todoInput");
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); 
 
-function render() {
-  listEl.innerHTML = "";
-  todos.forEach((t, i) => {
-    const li = document.createElement("li");
-    li.className = "item" + (t.done ? " done" : "");
+  const text = input.value.trim();
 
-    const label = document.createElement("span");
-    label.textContent = t.text;
+  if (text === "") {
+    alert("Skriv något först!");
+    return;
+  }
 
-    const spacer = document.createElement("span");
-    spacer.className = "spacer";
+  const newItem = document.createElement("li");
+  newItem.textContent = text;
 
-    const toggle = document.createElement("button");
-    toggle.textContent = t.done ? "Ångra" : "Klar";
-    toggle.onclick = () => {
-      todos[i].done = !todos[i].done;
-      render();
-    };
+  list.insertBefore(newItem, list.firstChild);
 
-    const del = document.createElement("button");
-    del.textContent = "Ta bort";
-    del.onclick = () => {
-      todos.splice(i, 1);
-      render();
-    };
-
-    li.append(label, spacer, toggle, del);
-    listEl.appendChild(li);
-  });
-}
-
-// CONFLICT-SEED: Ändra den här hjälpfunktionen i två olika branches för att skapa en konflikt.
-function addTodo(text) {
-  todos.unshift({ text, done: false });
-}
-
-addBtn.addEventListener("click", () => {
-  const val = inputEl.value.trim();
-  if (!val) return;
-  addTodo(val);
-  inputEl.value = "";
-  render();
+  input.value = "";
 });
-
-render();
