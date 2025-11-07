@@ -5,16 +5,13 @@ Användaren kan lägga till nya todos, markera dem som klara eller oklara, och t
 Applikationen är byggd i ren HTML, CSS och JavaScript .
 
 ---
-
-###  Hur man kör projektet.
-
+###  Hur man kör projektet!
 För att köra Todo Lite lokalt behöver du bara öppna filen `starter/index.html` i din webbläsare.  
-
 Om du använder **Visual Studio Code** rekommenderas **Live Server** –  
 
 ---
 
-###  Funktioner i projektet!!
+###  Funktioner i projektet.
 
 Projektet består av tre huvudfunktioner som tillsammans utgör en komplett todo-applikation:
 
