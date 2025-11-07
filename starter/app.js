@@ -3,7 +3,7 @@ const input = document.getElementById("todo-input");
 const list = document.getElementById("todo-list");
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); 
+  event.preventDefault();
 
   const text = input.value.trim();
 
@@ -12,8 +12,7 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
- const li = document.createElement("li");
-
+  const li = document.createElement("li");
   const span = document.createElement("span");
   span.textContent = text;
 
@@ -33,6 +32,12 @@ form.addEventListener("submit", function (event) {
     }
   });
 
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Ta bort";
+  deleteBtn.classList.add("delete-btn");
+  deleteBtn.style.marginLeft = "8px";
+  li.appendChild(deleteBtn);
+
   li.appendChild(span);
   li.appendChild(button);
 
@@ -40,4 +45,13 @@ form.addEventListener("submit", function (event) {
 
   input.value = "";
   input.focus();
+});
+
+list.addEventListener("click", function (event) {
+  const target = event.target;
+
+  if (target.classList.contains("delete-btn")) {
+    const li = target.parentElement;
+    li.remove();
+  }
 });
