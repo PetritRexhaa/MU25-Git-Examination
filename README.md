@@ -5,13 +5,16 @@ Användaren kan lägga till nya todos, markera dem som klara eller oklara, och t
 Applikationen är byggd i ren HTML, CSS och JavaScript .
 
 ---
-###  Hur man kör projektet!
+
+###  Hur man kör projektet
+
 För att köra Todo Lite lokalt behöver du bara öppna filen `starter/index.html` i din webbläsare.  
+
 Om du använder **Visual Studio Code** rekommenderas **Live Server** –  
 
 ---
 
-###  Funktioner i projektet.
+###  Funktioner i projektet
 
 Projektet består av tre huvudfunktioner som tillsammans utgör en komplett todo-applikation:
 
@@ -62,7 +65,16 @@ Där öppnades en **Pull Request (PR)** med en tydlig beskrivning och länk till
 ---
 
 ###  Mergekonflikt
+Eftersom ingen riktig konflikt uppstod under arbetet med mina features, skapade jag en egen medveten merge-konflikt
+I båda brancherna ändrade jag samma rader i README.md
 
+Så löste vi konflikten
+Öppnade PR:en i GitHub och klickade på “Resolve conflicts”.
+Granskade skillnaderna i båda versionerna (Current change vs Incoming change).
+Tog bort konfliktmarkörerna <<<<<<<, =======, >>>>>>>.
+Behöll den slutliga versionen av texten som vi ville ha kvar.
+Klickade Mark as resolved → Commit merge.
+Slutförde sedan PR:n genom Squash & merge in till main.
 
 ---
 
