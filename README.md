@@ -65,7 +65,16 @@ Där öppnades en **Pull Request (PR)** med en tydlig beskrivning och länk till
 ---
 
 ###  Mergekonflikt
+Eftersom ingen riktig konflikt uppstod under arbetet med mina features, skapade jag en egen medveten merge-konflikt
+I båda brancherna ändrade jag samma rader i README.md
 
+Så löste vi konflikten
+Öppnade PR:en i GitHub och klickade på “Resolve conflicts”.
+Granskade skillnaderna i båda versionerna (Current change vs Incoming change).
+Tog bort konfliktmarkörerna <<<<<<<, =======, >>>>>>>.
+Behöll den slutliga versionen av texten som vi ville ha kvar.
+Klickade Mark as resolved → Commit merge.
+Slutförde sedan PR:n genom Squash & merge in till main.
 
 ---
 
