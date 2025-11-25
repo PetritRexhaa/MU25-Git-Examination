@@ -45,6 +45,7 @@ form.addEventListener("submit", function (event) {
 
   input.value = "";
   input.focus();
+  updateEmptyState();
 });
 
 list.addEventListener("click", function (event) {
@@ -53,5 +54,17 @@ list.addEventListener("click", function (event) {
   if (target.classList.contains("delete-btn")) {
     const li = target.parentElement;
     li.remove();
+    updateEmptyState();
   }
 });
+
+function updateEmptyState() {
+  const empty = document.getElementById("empty-state");
+  if (!empty) return;
+
+  if (list.children.length === 0) {
+    empty.style.display = "block";
+  } else {
+    empty.style.display = "none";
+  }
+}
