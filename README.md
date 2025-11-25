@@ -96,7 +96,10 @@ och spara todos i **localStorage** så att listan finns kvar även efter att sid
 
 **Mina reviews:**  
 - Given:  
-- Mottagen: 
+
+- Mottagen: amerdervisicc
+https://github.com/PetritRexhaa/MU25-Git-Examination/pull/10
+
 
 ---
 
