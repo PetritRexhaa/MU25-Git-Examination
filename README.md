@@ -95,7 +95,8 @@ och spara todos i **localStorage** så att listan finns kvar även efter att sid
  https://trello.com/b/eHFM9pw4/mu25-examination
 
 **Mina reviews:**  
-- Given:  
+- Given:  amerdervisicc
+https://github.com/amerdervisicc/ExaminationGIT/pull/6
 
 - Mottagen: amerdervisicc
 https://github.com/PetritRexhaa/MU25-Git-Examination/pull/10
